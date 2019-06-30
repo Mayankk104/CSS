@@ -2,7 +2,6 @@ $secondry-green: #7ed56f;
 $primery-green : #55c57a;
 $terichry-green: #28b485;
 
-
 *,*::after,*::before{
     margin: 0;
     padding: 0;
@@ -22,7 +21,6 @@ body{
     color: #777;
     padding: 2rem;
 }
-
 .header{
     background-image: linear-gradient(to right bottom, rgba($primery-green, 0.8),rgba($secondry-green, 0.8)),url(../img/hero.jpg);
     background-size: cover;
@@ -30,23 +28,25 @@ body{
     height: 95vh;
     position: relative;
     width: 100%;
-    clip-path: polygon(0 0,100% 0, 100% 80%, 0 100%)
+    clip-path: polygon(0 0,100% 0, 100% 80%, 0 100%);
+
+    &__logo{
+        position: absolute;
+        left: 4rem;
+        top: 4rem;
+        height: 3.5rem;
+    }
+    
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    
 }
 
-.header__logo{
-    position: absolute;
-    left: 4rem;
-    top: 4rem;
-    height: 3.5rem;
-}
-
-.header__text-box{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
 
 .heading-primery{
     color: #fff;
