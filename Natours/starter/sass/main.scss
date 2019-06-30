@@ -1,0 +1,164 @@
+$secondry-green: #7ed56f;
+$primery-green : #55c57a;
+$terichry-green: #28b485;
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777;
+    padding: 2rem;
+}
+
+.header{
+    background-image: linear-gradient(to right bottom, rgba($primery-green, 0.8),rgba($secondry-green, 0.8)),url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 95vh;
+    position: relative;
+    width: 100%;
+    clip-path: polygon(0 0,100% 0, 100% 80%, 0 100%)
+}
+
+.header__logo{
+    position: absolute;
+    left: 4rem;
+    top: 4rem;
+    height: 3.5rem;
+}
+
+.header__text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.heading-primery{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.heading-primery--main{
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 35px;
+    /* animation: moveRight 1s; */
+    animation-name: moveRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.heading-primery--sub{
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.56rem;
+    animation: moveLeft 1s;
+    margin-bottom: 6rem;
+}
+
+
+@keyframes moveRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-8rem)
+    }
+    80%{
+        transform: translateX(1rem)
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(8rem)
+    }
+    80%{
+        transform: translateX(-8rem)
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btn--white{
+    color: #777;
+    background-color: #fff;
+}
+
+.btn:link,
+.btn:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    position: relative;
+    border-radius: 5rem;
+    transition: 0.2s;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);  
+}
+
+.btn::after{
+    border-radius: 5rem;
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: .4s;
+}
+
+.btn--white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    transform: scale(1.4,1.6);
+    opacity: 0;
+}
+
+.btn--animated{
+    animation: moveBtnUp 1s ease-out .75s backwards;
+}
+
+@keyframes moveBtnUp{
+    0%{
+        opacity: 0;
+        transform: translateY(8rem)
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
