@@ -30,6 +30,12 @@
 
     .col-3{
         width: calc((100% - #{$gurtter-horizontal*3})/4);
+        &--smg{
+            width: calc((100% - #{$gurtter-horizontal-sm*3})/4);
+            &:not(:last-child){
+                margin-right: $gurtter-horizontal-sm;
+            }
+        }
     }
 
 
