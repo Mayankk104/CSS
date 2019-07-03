@@ -109,6 +109,12 @@ body {
 .mb-6 {
   margin-bottom: 6rem; }
 
+.mb-7 {
+  margin-bottom: 7rem; }
+
+.mb-8 {
+  margin-bottom: 8rem; }
+
 .btn:link, .btn :visited {
   text-decoration: none;
   text-transform: uppercase;
@@ -124,6 +130,12 @@ body {
   background-color: #fff; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn--green {
+  color: #fff;
+  background-color: #55c57a; }
+  .btn--green::after {
+    background-color: #55c57a; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -213,9 +225,9 @@ body {
 .card {
   perspective: 150rem;
   position: relative;
-  height: 42rem; }
+  height: 50rem; }
   .card__side {
-    height: 42rem;
+    height: 50rem;
     transition: all .8s ease-out;
     position: absolute;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
@@ -223,20 +235,27 @@ body {
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    overflow: hidden; }
-    .card__side--front {
-      background-color: cadetblue; }
+    overflow: hidden;
+    border-radius: 10px; }
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back--b1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back--b2 {
+        background-image: linear-gradient(to right bottom, #55c57a, #7ed56f); }
+      .card__side--back--b3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card__img {
     height: 20rem;
     background-size: cover;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     background-blend-mode: screen; }
     .card__img--1 {
       background-image: url("../../img/nat-5.jpg"), linear-gradient(to right bottom, #ffb900, #ff7730); }
+    .card__img--2 {
+      background-image: url("../../img/nat-6.jpg"), linear-gradient(to right bottom, #55c57a, #7ed56f); }
+    .card__img--3 {
+      background-image: url("../../img/nat-7.jpg"), linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card__title {
     color: #fff;
     text-transform: uppercase;
@@ -246,11 +265,42 @@ body {
     font-size: 2.8rem;
     font-weight: 300;
     text-align: right;
-    width: 54%; }
+    width: 62%; }
+  .card__title-span {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 1rem 1.5rem; }
+    .card__title-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__title-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.85), rgba(126, 213, 111, 0.85)); }
+    .card__title-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__features-list {
+    padding: 3rem;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none; }
+    .card__features-list li {
+      padding: 1rem;
+      border-bottom: 1px solid #eee; }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+  .card__cta {
+    padding: 10rem 0;
+    text-align: center; }
+    .card__cta-only {
+      text-align: center;
+      color: #fff;
+      font-size: 3rem; }
+    .card__cta-price {
+      text-align: center;
+      color: #fff;
+      font-size: 6rem;
+      font-weight: 200; }
 
 .header {
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(126, 213, 111, 0.8)), url(../img/hero.jpg);
@@ -316,6 +366,6 @@ body {
     transform: skewY(7deg); }
 
 .popular-section {
-  margin-top: -6rem;
+  margin-top: -8rem;
   padding: 20rem 5rem;
   background-color: #f7f7f7; }
