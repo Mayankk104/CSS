@@ -8,7 +8,8 @@
     width: 100%;
     padding: 20rem 3rem;
     background-size: cover;
-    background-attachment: top;
+    margin-top: -6rem;
+    background-position: top;
     background-image: linear-gradient(to right bottom, rgba( $color-primary-green , 0.8),rgba( $color-secondary-green , 0.8)),url(../../img/nat-4.jpg);
 
     transform: skewY(-7deg);
@@ -17,4 +18,10 @@
         transform: skewY(7deg);    
     }
 
+}
+
+.popular-section{
+    margin-top: -6rem;
+    padding: 20rem 5rem;
+    background-color: $color-light-gray;
 }

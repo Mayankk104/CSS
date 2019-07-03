@@ -210,6 +210,48 @@ body {
     transform: translateY(-5px) scale(1.03);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
 
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 42rem; }
+  .card__side {
+    height: 42rem;
+    transition: all .8s ease-out;
+    position: absolute;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden; }
+    .card__side--front {
+      background-color: cadetblue; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back--b1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .card__img {
+    height: 20rem;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-blend-mode: screen; }
+    .card__img--1 {
+      background-image: url("../../img/nat-5.jpg"), linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .card__title {
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: right;
+    width: 54%; }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+
 .header {
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(126, 213, 111, 0.8)), url(../img/hero.jpg);
   background-size: cover;
@@ -266,8 +308,14 @@ body {
   width: 100%;
   padding: 20rem 3rem;
   background-size: cover;
-  background-attachment: top;
+  margin-top: -6rem;
+  background-position: top;
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(126, 213, 111, 0.8)), url(../../img/nat-4.jpg);
   transform: skewY(-7deg); }
   .features-section > * {
     transform: skewY(7deg); }
+
+.popular-section {
+  margin-top: -6rem;
+  padding: 20rem 5rem;
+  background-color: #f7f7f7; }
