@@ -302,24 +302,45 @@ body {
       font-size: 6rem;
       font-weight: 200; }
 
-.review-card {
-  background-color: aliceblue;
+.story {
   width: 75%;
-  padding: 5rem;
-  margin: 5rem auto;
-  transform: skewX(-7deg); }
-  .review-card > * {
-    transform: skewX(7deg); }
-  .review-card__img-container {
-    float: left;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  transform: skewx(-12deg); }
+  .story__shape {
+    position: relative;
     width: 15rem;
     height: 15rem;
-    -webkit-shape-outside: circle(50% at 50% 50%);
+    float: left;
+    overflow: hidden;
+    border-radius: 50%;
     shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(45% at 50% 50%);
-    clip-path: circle(43% at 50% 50%); }
-  .review-card__img {
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewx(12deg); }
+  .story__img {
     height: 100%; }
+  .story__text {
+    transform: skewx(12deg); }
+  .story__caption {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.bg-video {
+  position: absolute;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 100%; }
 
 .header {
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(126, 213, 111, 0.8)), url(../img/hero.jpg);
@@ -390,5 +411,6 @@ body {
   background-color: #f7f7f7; }
 
 .reviews-section {
-  background-color: bisque;
+  position: relative;
+  overflow: hidden;
   padding: 10rem 0; }
