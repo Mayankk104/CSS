@@ -303,12 +303,21 @@ body {
       font-weight: 200; }
 
 .review-card {
-  background-color: aliceblue; }
+  background-color: aliceblue;
+  width: 75%;
+  padding: 5rem;
+  margin: 5rem auto;
+  transform: skewX(-7deg); }
+  .review-card > * {
+    transform: skewX(7deg); }
   .review-card__img-container {
+    float: left;
     width: 15rem;
     height: 15rem;
     -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%); }
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(45% at 50% 50%);
+    clip-path: circle(43% at 50% 50%); }
   .review-card__img {
     height: 100%; }
 
@@ -382,4 +391,4 @@ body {
 
 .reviews-section {
   background-color: bisque;
-  padding: 10rem; }
+  padding: 10rem 0; }

@@ -1,17 +1,25 @@
 .review-card{
     background-color: aliceblue;
+    width: 75%;
+    padding: 5rem;
+    margin: 5rem auto;
+    transform: skewX(-7deg);
+
+    & > *{
+        transform: skewX(7deg);
+    }
 
     &__img-container{
+        float: left;
         width: 15rem;
         height: 15rem;
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(45% at 50% 50%);
+        clip-path: circle(43% at 50% 50%);
     }
 
     &__img{
         height: 100%;
-
     }
 }
