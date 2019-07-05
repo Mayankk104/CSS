@@ -1,0 +1,57 @@
+.navigation{
+    &__link{
+        text-decoration: none;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 2.3rem;
+    }
+
+    &__item{
+        text-align: center;
+        list-style: none;
+        padding: 1rem;
+    }
+    
+    &__list{
+        margin: 5px;
+        background-image: linear-gradient(120deg, red 50%, $color-white 50%)
+        transform: translate(-50%,-50%);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+    }
+
+    &__nav{
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+    }
+    &__background{
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-image: radial-gradient($color-secondary-green, $color-primary-green);
+        z-index: 100;
+        transform: scale(60);
+    }
+    &__button{
+        background-color: $color-white;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        top: 5.5rem;
+        right: 5.5rem;
+        position: fixed;
+        z-index: 102;
+    }
+
+    &__checkbox{
+        display: none;
+    }
+}
