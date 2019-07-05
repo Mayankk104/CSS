@@ -1,0 +1,36 @@
+.form{
+    width: 50%;
+
+    &__group{
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+    &__input{
+        font:inherit;
+        display: block;
+        width: 90%;
+        padding: .5rem .75rem;
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: 0.1s ease-in-out;
+
+        &:focus{
+            border-bottom: 3px solid $color-primary-green;
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black,0.3)
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid $color-primary-orange;            
+        }
+
+        &::-webkit-input-placeholder{
+            color: #999;
+        }
+
+    }
+    &__lable{
+        
+    }
+}
